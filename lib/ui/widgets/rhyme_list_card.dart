@@ -4,8 +4,9 @@ import 'package:rhymer/ui/widgets/base_container.dart';
 class RhymeListCard extends StatelessWidget {
   const RhymeListCard({
     super.key,
+    this.isFavourite = false,
   });
-
+  final bool isFavourite;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -16,7 +17,10 @@ class RhymeListCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text('Rhyme ', style: theme.textTheme.bodyLarge),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_border)),
+          IconButton(
+            onPressed: () {},
+            icon: isFavourite ? Icon(Icons.favorite, color: theme.primaryColor) : const Icon(Icons.favorite_border),
+          ),
         ],
       ),
     );

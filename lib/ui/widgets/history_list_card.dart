@@ -18,15 +18,12 @@ class HistoryListCard extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text('Word', style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w700)),
-          Wrap(
-            children: rhymes
-                .map(
-                  (e) => Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: e,
-                  ),
-                )
-                .toList(),
+          Flexible(
+            child: Text(
+              rhymes.map((e) => '$e, ').join(),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 3,
+            ),
           ),
         ],
       ),

@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:rhymer/features/search/presentation/widgets/history_list_card.dart';
 import 'package:rhymer/features/search/presentation/widgets/search_button.dart';
+import 'package:rhymer/ui/widgets/history_list_card.dart';
 import 'package:rhymer/ui/widgets/rhyme_list_card.dart';
 
 @RoutePage()
