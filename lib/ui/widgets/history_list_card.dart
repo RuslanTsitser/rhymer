@@ -20,7 +20,14 @@ class HistoryListCard extends StatelessWidget {
           Text('Word', style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w700)),
           Flexible(
             child: Text(
-              rhymes.map((e) => '$e, ').join(),
+              rhymes.asMap().entries.map((e) {
+                final sb = StringBuffer();
+                sb.write(e.value);
+                if (e.key != rhymes.length - 1) {
+                  sb.write(', ');
+                }
+                return sb.toString();
+              }).join(),
               overflow: TextOverflow.ellipsis,
               maxLines: 3,
             ),

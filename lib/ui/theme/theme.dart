@@ -6,4 +6,5 @@ var themeData = ThemeData(
   primarySwatch: primaryColor,
   colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
   useMaterial3: true,
+  dividerTheme: DividerThemeData(color: Colors.grey.shade200),
 );
